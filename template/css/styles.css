@@ -1,0 +1,217 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: Helvetica, sans-serif;
+    height: 100vh;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/*--------- VARIABLES ---------------*/
+:root {
+    
+    
+    /*--------- Theme colors -----------*/
+    --primary-bg: #203040;
+    --white: #FFF;
+    --orange: #ff8000;
+    --gray: #c0c0c0;
+    --ligth-gray: #808080;
+    --sidebar-color: #F0F0F0;
+    --black: #000;
+    /*---X----- Theme colors ------X----*/
+
+
+    /*--------- Theme Font Family -----------*/
+    --hevetical: Helvetica sans-serif;
+    /*----X---- Theme Font Family -----X-----*/
+
+
+}
+/*----X---- VARIABLES -------X-------*/
+
+
+
+
+
+
+/*----------Global styles ------------------*/
+
+    a {
+        text-decoration: none;
+        color: var(--primary-bg);
+        cursor: pointer;
+    }
+    a:hover {
+        color: var(--orange);
+    }
+
+/*----------Global styles ------------------*/
+
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 5rem 1fr 5rem;
+    grid-template-areas: 
+     "header"
+     "main"
+     "footer";
+    height: 100%;
+}
+
+
+
+
+/*-------------- Header -------------------*/
+
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-bg);
+    color: var(--white);
+    padding: 0 2rem;
+}
+
+.header .brand a{
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.header .brand button {
+    font-size: 2rem;
+    border: none;
+    background: none;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.header .brand span {
+    color: var(--orange);
+}
+
+.header .header-links a {
+    color: var(--white);
+    font-weight: 300;
+}
+
+.header .header-links a:hover {
+    color: var(--orange);
+}
+/*-------X------ Header ---------X---------*/
+
+
+
+
+
+/*---------- Sidebar ---------------*/
+.sidebar {
+    position: fixed;
+    transform: translateX(-30rem);
+    width: 30rem;
+    height: 100%;
+    background-color: var(--sidebar-color);
+    padding: 1rem;
+}
+
+.sidebar.open  {
+    transform: translateX(0);
+}
+
+.close-menu-button {
+    border-radius: 50%;
+    border: .1rem solid var(--black);
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    padding: 0;
+    position: absolute;
+    right: 1rem;
+    top: .5rem;
+}
+/*-----X---- Sidebar --------X------*/
+
+
+
+
+/*-------------- Main -------------------*/
+.main {
+    grid-area: main;
+}
+
+
+/*--------- Home screen -----------*/
+.main .products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main .products li {
+    list-style: none;
+    padding: 0;
+    flex: 0 1 25rem;
+    height: 35rem;
+    border-bottom: .1rem solid var(--gray)
+}
+
+.main .products .product-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    padding: 2rem;
+}
+
+.main .products .product-image {
+    max-width: 15rem;
+    max-height: 15rem;
+}
+
+.main .products .product-name,
+.main .products .product-price {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.main .products .product-brand {
+    font-size: 1.2rem;
+    color: var(--ligth-gray)
+}
+
+.main .products .product-rating {
+    margin-bottom: 1rem;
+}
+
+/*----X---- Home screen -----X-----*/
+
+
+
+
+
+/*-------X------ Main --------X----------*/
+
+
+
+
+
+
+/*-------------- Footer -------------------*/
+.footer {
+    grid-area: footer;
+}
+/*------X------- Footer ----------X--------*/
